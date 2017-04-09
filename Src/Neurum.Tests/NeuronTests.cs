@@ -13,5 +13,13 @@
 
             Assert.AreEqual(0, neuron.Value);
         }
+
+        [TestMethod]
+        public void NeuronWithValueThatTriggersOuput()
+        {
+            Neuron neuron = new Neuron(new RealValue(1.0));
+
+            Assert.AreEqual(1, neuron.Value);
+        }
     }
 }
