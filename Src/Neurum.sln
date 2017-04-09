@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neurum", "Neurum\Neurum.csproj", "{B1F91572-F74E-4359-8AAD-91943FE2D033}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neurum.Tests", "Neurum.Tests\Neurum.Tests.csproj", "{80E41C4A-2469-4B64-93FB-32643CEB2D6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2B573BA3-077B-479D-B105-EC94F041D937}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Neurum.vsmdi = Neurum.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Neurum.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1F91572-F74E-4359-8AAD-91943FE2D033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F91572-F74E-4359-8AAD-91943FE2D033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F91572-F74E-4359-8AAD-91943FE2D033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F91572-F74E-4359-8AAD-91943FE2D033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80E41C4A-2469-4B64-93FB-32643CEB2D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80E41C4A-2469-4B64-93FB-32643CEB2D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80E41C4A-2469-4B64-93FB-32643CEB2D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80E41C4A-2469-4B64-93FB-32643CEB2D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
