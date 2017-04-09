@@ -15,7 +15,7 @@
         }
 
         [TestMethod]
-        public void NeuronWithValueThatTriggersOuput()
+        public void NeuronWithValueThatTriggersOutput()
         {
             Neuron neuron = new Neuron(new RealValue(1.0));
 

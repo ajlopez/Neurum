@@ -8,6 +8,7 @@
     public class Neuron : IValue
     {
         private IValue input;
+        private IValueFunction function;
 
         public Neuron()
             : this(new RealValue())
@@ -15,10 +16,16 @@
         }
 
         public Neuron(IValue input)
+            : this(input, new ThresholdFunction(1.0))
         {
-            this.input = input;
         }
 
-        public double Value { get { return this.input.Value >= 1.0 ? 1 : 0; } }
+        public Neuron(IValue input, IValueFunction function)
+        {
+            this.input = input;
+            this.function = function;
+        }
+
+        public double Value { get { return this.function.Evaluate(this.input.Value); } }
     }
 }
