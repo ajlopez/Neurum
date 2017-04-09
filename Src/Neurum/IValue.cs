@@ -5,8 +5,8 @@
     using System.Linq;
     using System.Text;
 
-    public class Neuron : IValue
+    public interface IValue
     {
-        public double Value { get { return 0; } }
+        double Value { get; }
     }
 }
