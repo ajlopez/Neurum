@@ -19,7 +19,7 @@
 
         public IList<Neuron> Neurons { get { return this.neurons; } }
 
-        public IValue CreateWeightedValue()
+        public WeightedValue CreateWeightedValue()
         {
             return null;
         }
