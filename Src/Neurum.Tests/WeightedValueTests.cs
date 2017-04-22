@@ -9,7 +9,7 @@
         [TestMethod]
         public void CreatedWeightedValueWithValueZero()
         {
-            var value = new WeigthedValue(new IValue[] { }, new double[] { });
+            var value = new WeightedValue(new IValue[] { }, new double[] { });
 
             Assert.IsNotNull(value.Inputs);
             Assert.AreEqual(0, value.Inputs.Count);
@@ -23,7 +23,7 @@
         [TestMethod]
         public void CreatedWeightedValueWithValueOne()
         {
-            var value = new WeigthedValue(new IValue[] { new RealValue(1) }, new double[] { 1 });
+            var value = new WeightedValue(new IValue[] { new RealValue(1) }, new double[] { 1 });
 
             Assert.IsNotNull(value.Inputs);
             Assert.AreEqual(1, value.Inputs.Count);
@@ -37,7 +37,7 @@
         [TestMethod]
         public void CreatedWeightedValueWithValueThree()
         {
-            var value = new WeigthedValue(new IValue[] { new RealValue(1), new RealValue(2) }, new double[] { 1, 1 });
+            var value = new WeightedValue(new IValue[] { new RealValue(1), new RealValue(2) }, new double[] { 1, 1 });
 
             Assert.IsNotNull(value.Inputs);
             Assert.AreEqual(2, value.Inputs.Count);

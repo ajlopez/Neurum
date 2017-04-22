@@ -5,12 +5,12 @@
     using System.Linq;
     using System.Text;
 
-    public class WeigthedValue : IValue
+    public class WeightedValue : IValue
     {
         private IList<IValue> inputs;
         private IList<double> weights;
 
-        public WeigthedValue(IList<IValue> inputs, IList<double> weights)
+        public WeightedValue(IList<IValue> inputs, IList<double> weights)
         {
             this.inputs = inputs;
             this.weights = weights;
