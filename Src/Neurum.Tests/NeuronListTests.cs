@@ -3,6 +3,7 @@
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.Linq;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
@@ -37,6 +38,7 @@
                 Assert.AreSame(list.Neurons[k], result.Inputs[k]);
                 Assert.IsTrue(result.Weights[k] >= -1.0);
                 Assert.IsTrue(result.Weights[k] <= 1.0);
+                Assert.IsTrue(result.Weights.Any(x => x != 0));
             }
         }
     }
