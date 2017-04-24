@@ -7,8 +7,6 @@
 
     public class NeuronList
     {
-        private static Random random = new Random();
-
         private IList<Neuron> neurons;
 
         public NeuronList(int nneurons)
@@ -23,14 +21,9 @@
 
         public WeightedValue CreateWeightedValue()
         {
-            double[] weights = new double[this.neurons.Count];
-
-            for (int k = 0; k < weights.Length; k++)
-                weights[k] = random.NextDouble() * 2 - 1;
-
             IList<IValue> values = new List<IValue>(this.neurons);
-            WeightedValue value = new WeightedValue(values, weights);
-            return value;
+
+            return WeightedValue.CreateWeightedValue(values);
         }
     }
 }

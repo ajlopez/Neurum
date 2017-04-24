@@ -7,6 +7,8 @@
 
     public class WeightedValue : IValue
     {
+        private static Random random = new Random();
+
         private IList<IValue> inputs;
         private IList<double> weights;
 
@@ -33,6 +35,17 @@
 
                 return result;
             }
+        }
+
+        public static WeightedValue CreateWeightedValue(IList<IValue> values)
+        {
+            double[] weights = new double[values.Count];
+
+            for (int k = 0; k < weights.Length; k++)
+                weights[k] = random.NextDouble() * 2 - 1;
+
+            WeightedValue value = new WeightedValue(values, weights);
+            return value;
         }
     }
 }
