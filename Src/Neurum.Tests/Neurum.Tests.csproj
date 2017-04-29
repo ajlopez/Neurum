@@ -45,6 +45,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NeuronLayeredNetworkTests.cs" />
     <Compile Include="NeuronListTests.cs" />
     <Compile Include="WeightedValueTests.cs" />
     <Compile Include="ThresholdFunctionTests.cs" />
