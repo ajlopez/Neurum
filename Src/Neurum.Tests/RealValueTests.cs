@@ -21,5 +21,15 @@
 
             Assert.AreEqual(3.14159, value.Value);
         }
+
+        [TestMethod]
+        public void ChangeRealValue()
+        {
+            RealValue value = new RealValue();
+
+            value.Value = 3.14159;
+
+            Assert.AreEqual(3.14159, value.Value);
+        }
     }
 }

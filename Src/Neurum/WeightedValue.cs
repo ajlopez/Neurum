@@ -42,7 +42,7 @@
             double[] weights = new double[values.Count];
 
             for (int k = 0; k < weights.Length; k++)
-                weights[k] = random.NextDouble() * 2 - 1;
+                weights[k] = (random.NextDouble() * 2) - 1;
 
             WeightedValue value = new WeightedValue(values, weights);
             return value;
