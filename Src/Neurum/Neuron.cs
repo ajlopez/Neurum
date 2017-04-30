@@ -9,6 +9,7 @@
     {
         private IValue input;
         private IValueFunction function;
+        private double? cachedValue;
 
         public Neuron()
             : this(new RealValue())
@@ -26,6 +27,15 @@
             this.function = function;
         }
 
-        public double Value { get { return this.function.Evaluate(this.input.Value); } }
+        public double Value { 
+            get {
+                if (this.cachedValue != null)
+                    return this.cachedValue.Value;
+
+                this.cachedValue = this.function.Evaluate(this.input.Value);
+
+                return this.cachedValue.Value;
+            } 
+        }
     }
 }
