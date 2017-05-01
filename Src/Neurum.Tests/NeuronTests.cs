@@ -21,5 +21,22 @@
 
             Assert.AreEqual(1, neuron.Value);
         }
+
+        [TestMethod]
+        public void NeuronWithCachedValue()
+        {
+            var real = new RealValue(1.0);
+            Neuron neuron = new Neuron(real);
+
+            Assert.AreEqual(1, neuron.Value);
+
+            real.Value = 0.0;
+
+            Assert.AreEqual(1, neuron.Value);
+
+            neuron.Clear();
+
+            Assert.AreEqual(0, neuron.Value);
+        }
     }
 }

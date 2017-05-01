@@ -37,5 +37,10 @@
                 return this.cachedValue.Value;
             } 
         }
+
+        public void Clear()
+        {
+            this.cachedValue = null;
+        }
     }
 }
