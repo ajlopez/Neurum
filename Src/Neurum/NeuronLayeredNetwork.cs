@@ -33,5 +33,10 @@
         {
             return this.layers[n];
         }
+
+        public IList<double> Evaluate(IList<double> inputs)
+        {
+            return null;
+        }
     }
 }

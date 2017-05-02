@@ -22,5 +22,16 @@
             Assert.IsNotNull(network.GetLayer(2));
             Assert.AreEqual(3, network.GetLayer(2).Count);
         }
+
+        [TestMethod]
+        public void EvaluateLayeredNetworkWithThreeLayers()
+        {
+            NeuronLayeredNetwork network = new NeuronLayeredNetwork(new int[] { 4, 5, 3 });
+
+            var result = network.Evaluate(null);
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(3, result.Count);
+        }
     }
 }
