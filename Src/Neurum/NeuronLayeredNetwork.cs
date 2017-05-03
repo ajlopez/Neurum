@@ -36,7 +36,7 @@
 
         public IList<double> Evaluate(IList<double> inputs)
         {
-            return null;
+            return this.layers.Last().Select(x => x.Value).ToList();
         }
     }
 }
