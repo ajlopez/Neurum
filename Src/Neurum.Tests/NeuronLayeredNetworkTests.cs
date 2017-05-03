@@ -32,6 +32,8 @@
 
             Assert.IsNotNull(result);
             Assert.AreEqual(3, result.Count);
+             
+            Assert.IsTrue(result.All(x => x >= 0 && x <= 1.0));
         }
     }
 }
