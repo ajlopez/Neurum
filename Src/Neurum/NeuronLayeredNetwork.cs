@@ -36,6 +36,13 @@
 
         public IList<double> Evaluate(IList<double> inputs)
         {
+            foreach (var layer in this.layers.Skip(1))
+                foreach (var neuron in layer)
+                    ((Neuron)neuron).Clear();
+
+            for (int k = 0; k < inputs.Count; k++)
+                ((RealValue)this.layers[0][k]).Value = inputs[k];
+
             return this.layers.Last().Select(x => x.Value).ToList();
         }
     }

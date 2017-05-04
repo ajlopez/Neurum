@@ -28,7 +28,7 @@
         {
             NeuronLayeredNetwork network = new NeuronLayeredNetwork(new int[] { 4, 5, 3 });
 
-            var result = network.Evaluate(null);
+            var result = network.Evaluate(new double[] { 0.0, 0.0, 0.0, 0.0 });
 
             Assert.IsNotNull(result);
             Assert.AreEqual(3, result.Count);
