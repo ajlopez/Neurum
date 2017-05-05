@@ -24,7 +24,7 @@
         }
 
         [TestMethod]
-        public void EvaluateLayeredNetworkWithThreeLayers()
+        public void EvaluateLayeredNetworkWithThreeLayersInputZeroOutputZero()
         {
             NeuronLayeredNetwork network = new NeuronLayeredNetwork(new int[] { 4, 5, 3 });
 
@@ -33,7 +33,20 @@
             Assert.IsNotNull(result);
             Assert.AreEqual(3, result.Count);
              
-            Assert.IsTrue(result.All(x => x >= 0 && x <= 1.0));
+            Assert.IsTrue(result.All(x => x == 0));
+        }
+
+        [TestMethod]
+        public void EvaluateLayeredNetworkWithThreeLayersInputNonZero()
+        {
+            NeuronLayeredNetwork network = new NeuronLayeredNetwork(new int[] { 4, 5, 3 });
+
+            var result = network.Evaluate(new double[] { 1.0, 1.0, 1.0, 1.0 });
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(3, result.Count);
+
+            Assert.IsTrue(result.All(x => x == 0));
         }
     }
 }
