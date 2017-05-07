@@ -1,6 +1,8 @@
 ﻿namespace Neurum.Tests
 {
     using System;
+    using System.Collections;
+    using System.Linq;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
@@ -46,6 +48,16 @@
             Assert.AreEqual(2, value.Weights.Count);
 
             Assert.AreEqual(3, value.Value);
+        }
+
+        [TestMethod]
+        public void AdjustWeightedValueWithPercentage()
+        {
+            var value = new WeightedValue(new IValue[] { new RealValue(1), new RealValue(2) }, new double[] { 1, 1 });
+
+            value.Adjust(0.1);
+
+            Assert.IsTrue(value.Weights.All(w => w == 1.1));
         }
     }
 }

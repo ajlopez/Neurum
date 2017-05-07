@@ -37,6 +37,11 @@
             }
         }
 
+        public void Adjust(double percentage)
+        {
+            this.weights = this.weights.Select(w => w + w * percentage).ToList();
+        }
+
         public static WeightedValue CreateWeightedValue(IList<IValue> values)
         {
             double[] weights = new double[values.Count];
