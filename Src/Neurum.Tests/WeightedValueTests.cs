@@ -51,13 +51,23 @@
         }
 
         [TestMethod]
-        public void AdjustWeightedValueWithPercentage()
+        public void AdjustPositiveWeightsWithPercentage()
         {
             var value = new WeightedValue(new IValue[] { new RealValue(1), new RealValue(2) }, new double[] { 1, 1 });
 
             value.Adjust(0.1);
 
             Assert.IsTrue(value.Weights.All(w => w == 1.1));
+        }
+
+        [TestMethod]
+        public void AdjustNegativeWeightsWithPercentage()
+        {
+            var value = new WeightedValue(new IValue[] { new RealValue(1), new RealValue(2) }, new double[] { -1, -1 });
+
+            value.Adjust(0.1);
+
+            Assert.IsTrue(value.Weights.All(w => w == -0.9));
         }
     }
 }

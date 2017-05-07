@@ -39,7 +39,7 @@
 
         public void Adjust(double percentage)
         {
-            this.weights = this.weights.Select(w => w + w * percentage).ToList();
+            this.weights = this.weights.Select(w => w + Math.Abs(w) * percentage).ToList();
         }
 
         public static WeightedValue CreateWeightedValue(IList<IValue> values)
