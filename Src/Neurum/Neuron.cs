@@ -9,6 +9,7 @@
     {
         private IValue input;
         private IValueFunction function;
+        private double bias;
         private double? cachedValue;
 
         public Neuron()
@@ -17,14 +18,15 @@
         }
 
         public Neuron(IValue input)
-            : this(input, new ThresholdFunction(1.0))
+            : this(input, new ThresholdFunction(1.0), 0.0)
         {
         }
 
-        public Neuron(IValue input, IValueFunction function)
+        public Neuron(IValue input, IValueFunction function, double bias)
         {
             this.input = input;
             this.function = function;
+            this.bias = bias;
         }
 
         public double Value 
@@ -34,7 +36,7 @@
                 if (this.cachedValue != null)
                     return this.cachedValue.Value;
 
-                this.cachedValue = this.function.Evaluate(this.input.Value);
+                this.cachedValue = this.function.Evaluate(this.input.Value + this.bias);
 
                 return this.cachedValue.Value;
             } 

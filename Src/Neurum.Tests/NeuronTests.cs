@@ -23,6 +23,22 @@
         }
 
         [TestMethod]
+        public void NeuronWithBiasThatTriggersOutput()
+        {
+            Neuron neuron = new Neuron(new RealValue(0.0), new ThresholdFunction(1.0), 1.0);
+
+            Assert.AreEqual(1, neuron.Value);
+        }
+
+        [TestMethod]
+        public void NeuronWithBiasThatDoesNotTriggersOutput()
+        {
+            Neuron neuron = new Neuron(new RealValue(1.0), new ThresholdFunction(1.0), -1.0);
+
+            Assert.AreEqual(0, neuron.Value);
+        }
+
+        [TestMethod]
         public void NeuronWithCachedValue()
         {
             var real = new RealValue(1.0);
