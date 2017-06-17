@@ -27,8 +27,10 @@
             this.function = function;
         }
 
-        public double Value { 
-            get {
+        public double Value 
+        {
+            get 
+            {
                 if (this.cachedValue != null)
                     return this.cachedValue.Value;
 
