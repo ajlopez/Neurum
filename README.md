@@ -9,6 +9,10 @@ Neural networks implemented in C#, WIP
 - [MNIST For ML Beginners](https://www.tensorflow.org/get_started/mnist/beginners)
 - [Deep MNIST for Experts](https://www.tensorflow.org/get_started/mnist/pros)
 
+## Books
+
+- Neural Networks, a Comprehensive Foundation, Simon Haykin, Prentice Hall
+
 ## License
 
 MIT
