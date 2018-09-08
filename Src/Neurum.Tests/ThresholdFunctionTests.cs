@@ -19,7 +19,7 @@
         {
             ThresholdFunction fn = new ThresholdFunction(1.0);
 
-            Assert.AreEqual(1.0, fn.Evaluate(1.0));
+            Assert.AreEqual(0.0, fn.Evaluate(1.0));
             Assert.AreEqual(1.0, fn.Evaluate(1.1));
             Assert.AreEqual(1.0, fn.Evaluate(1000));
 

@@ -25,7 +25,7 @@
         [TestMethod]
         public void NeuronWithBiasThatTriggersOutput()
         {
-            Neuron neuron = new Neuron(new RealValue(0.0), new ThresholdFunction(1.0), 1.0);
+            Neuron neuron = new Neuron(new RealValue(0.0), new ThresholdFunction(1.0), 1.1);
 
             Assert.AreEqual(1, neuron.Value);
         }

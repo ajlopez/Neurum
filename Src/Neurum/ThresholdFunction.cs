@@ -18,7 +18,7 @@
 
         public double Evaluate(double value)
         {
-            return value >= this.threshold ? 1.0 : 0.0;
+            return value > this.threshold ? 1.0 : 0.0;
         }
     }
 }
