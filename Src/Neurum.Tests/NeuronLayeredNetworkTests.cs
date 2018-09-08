@@ -46,7 +46,7 @@
             Assert.IsNotNull(result);
             Assert.AreEqual(10, result.Count);
 
-            Assert.IsTrue(result.All(x => x == 0));
+            Assert.IsTrue(result.Any(x => x != 0));
         }
     }
 }
