@@ -18,7 +18,7 @@
         }
 
         public Neuron(IValue input)
-            : this(input, new ThresholdFunction(0.0), 0.0)
+            : this(input, new ThresholdFunction(), 0.0)
         {
         }
 
