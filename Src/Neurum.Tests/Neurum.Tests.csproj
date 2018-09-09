@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="NeuronLayeredNetworkTests.cs" />
     <Compile Include="NeuronListTests.cs" />
+    <Compile Include="SignumFunctionTests.cs" />
     <Compile Include="WeightedValueTests.cs" />
     <Compile Include="ThresholdFunctionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
